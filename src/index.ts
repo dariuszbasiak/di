@@ -17,7 +17,6 @@ const renderUsers = async () => {
 
     listItemNode.innerHTML = user.name;
     listNode.appendChild(listItemNode);
-    listNode.appendChild(listItemNode);
   });
 };
 
