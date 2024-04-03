@@ -10,12 +10,9 @@ export const createIoCContainer = () =>  {
   ioc.registerClass('logger', Logger);
   ioc.registerClass('users', Users);
   ioc.registerClass('http', HTTP)
-  ioc.register('config', {
-    "path": "/api",
-    "resources": {
-      "users": "/users"
-    }
-  });
+
+  const config = (window as any).__CONFIG__;
+  ioc.register('config', config.api);
 
   return ioc;
 };

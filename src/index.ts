@@ -5,6 +5,7 @@ import type { User } from './types';
 import {createIoCContainer} from "./ioc";
 
 const ioc = createIoCContainer();
+
 const renderUsers = async () => {
   const usersService: Users = ioc.resolve('users');
   const users = await usersService.getUsers();
